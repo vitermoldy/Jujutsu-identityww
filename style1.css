@@ -1,0 +1,30 @@
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.table-container {
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    padding-left: 50%; 
+    position: relative;
+  }
+
+  td::before {
+    position: absolute;
+    left: 10px;
+    white-space: nowrap;
+    content: attr(data-label);
+  }
+}
